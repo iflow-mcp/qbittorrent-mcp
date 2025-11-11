@@ -1,5 +1,5 @@
 [project]
-name = "qbittorrent"
+name = "iflow-mcp_qbittorrent-mcp"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,3 +8,9 @@ dependencies = [
     "httpx>=0.28.1",
     "mcp[cli]>=1.8.1",
 ]
+
+[project.scripts]
+qbittorrent-mcp = "qbittorrent_mcp.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["qbittorrent_mcp"]

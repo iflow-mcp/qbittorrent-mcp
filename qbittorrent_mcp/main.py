@@ -4,7 +4,7 @@ import base64
 import os
 import json
 import uuid
-from api import (
+from .api import (
     login_to_qbittorrent,
     add_torrent_api,
     delete_torrent_api,
@@ -225,5 +225,8 @@ async def get_torrent_list() -> str:
     """
     return await get_torrent_list_api(host=DEFAULT_HOST, username=DEFAULT_USERNAME, password=DEFAULT_PASSWORD)
 
-if __name__ == "__main__":
+def main():
     app.run(transport='stdio')
+
+if __name__ == "__main__":
+    main()
